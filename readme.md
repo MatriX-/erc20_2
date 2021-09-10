@@ -40,6 +40,9 @@ Write and run contract tests from `./test` directory. Start up a local developme
 - TanganyLoveToken (faucet):
 <br>(2020-10-12) [0x62f49D4A051a22Cd5573b1197FD3E96F1026346D](https://ropsten.etherscan.io/address/0x62f49D4A051a22Cd5573b1197FD3E96F1026346D)
 
+- Payments Contract:
+<br>(2021-09-10) [0x4341f8409dF7EE681Ca3C79250e8e97bD5B32438](https://ropsten.etherscan.io/address/0x4341f8409dF7EE681Ca3C79250e8e97bD5B32438)
+
 - Test Contract (deprecated): 
 <br>(2020-07-08) [0x61B6a7b2b031Ca7053c3fD28F255AC4B17ecd5a4](https://ropsten.etherscan.io/address/0x61b6a7b2b031ca7053c3fd28f255ac4b17ecd5a4)
 

@@ -37,7 +37,7 @@ if (process.env.PRIVATE_NETWORK_ID) {
     console.log("Using env var PRIVATE_NETWORK_ID", process.env.PRIVATE_NETWORK_ID);
 }
 if (process.env.ETHERSCAN_APIKEY) {
-    console.log("Using env var process.env.ETHERSCAN_APIKEY", abbrv(process.env.ETHERSCAN_APIKEY));
+    console.log("Using env var ETHERSCAN_APIKEY", abbrv(process.env.ETHERSCAN_APIKEY));
 }
 
 module.exports = {
@@ -46,6 +46,9 @@ module.exports = {
     ],
     etherscan: {
         apiKey: process.env.ETHERSCAN_APIKEY
+    },
+    api_keys: {
+        etherscan: process.env.ETHERSCAN_APIKEY
     },
     /**
      * Networks define how you connect to your ethereum client and let you set the
