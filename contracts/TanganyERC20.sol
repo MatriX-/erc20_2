@@ -1,5 +1,5 @@
 // SPDX-License-Identifier: MIT
-pragma solidity ^0.6.0;
+pragma solidity ^0.8.0;
 
 import "@openzeppelin/contracts/token/ERC20/ERC20.sol";
 
@@ -20,8 +20,11 @@ contract TanganyERC20 is ERC20 {
     /**
      * @dev Constructor that gives msg.sender all of existing tokens.
      */
-    constructor () public ERC20(NAME, SYMBOL) {
-        _setupDecimals(DECIMALS);
+    constructor () ERC20(NAME, SYMBOL) {
         _mint(msg.sender, INITIAL_SUPPLY);
+    }
+
+    function decimals() public pure override returns (uint8) {
+        return DECIMALS;
     }
 }
