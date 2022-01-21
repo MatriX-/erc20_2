@@ -1,7 +1,7 @@
 // SPDX-License-Identifier: MIT
-pragma solidity ^0.6.0;
+pragma solidity ^0.8.0;
 
-import '@openzeppelin/contracts/utils/Address.sol';
+import '../node_modules/@openzeppelin/contracts/utils/Address.sol';
 
 contract TestContract {
     address payable public owner;
@@ -12,8 +12,8 @@ contract TestContract {
     event ValueChanged(uint256 newValue);
     event VaultUpdated(address storageid);
 
-    constructor() public {
-        owner = msg.sender;
+    constructor() {
+        owner = payable(msg.sender);
     }
 
     function payme() public payable {
@@ -60,7 +60,7 @@ contract TestContract {
     function setVault(address _address, string calldata _value) public {
         Vault storage v = vaults[_address];
 
-        v.updated = now;
+        v.updated = block.timestamp;
         v.value = _value;
         VaultAccounts.push(_address);
 
@@ -72,7 +72,7 @@ contract TestContract {
     }
 
     function getVaultsWithTime() view public returns (address[] memory, uint) {
-        return (VaultAccounts, now);
+        return (VaultAccounts, block.timestamp);
     }
 
     function getVault(address _address) view public returns (uint, string memory) {

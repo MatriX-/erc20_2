@@ -1,14 +1,14 @@
 // SPDX-License-Identifier: MIT
-pragma solidity ^0.6.0;
+pragma solidity ^0.8.0;
 
-import "@openzeppelin/contracts/token/ERC721/ERC721.sol";
-import "@openzeppelin/contracts/access/Ownable.sol";
+import '@openzeppelin/contracts/token/ERC721/extensions/ERC721Enumerable.sol';
+import '@openzeppelin/contracts/access/Ownable.sol';
 
 /**
  * @title TanganyERC721
  * @dev Simple ERC721 Token example yields a non-fungible token pre-assigned to its creator.
  */
-contract TanganyERC721 is ERC721, Ownable {
+contract TanganyERC721 is ERC721Enumerable, Ownable {
     // modify token name
     string public constant NAME = "TanganyERC721";
     // modify token symbol
@@ -17,11 +17,11 @@ contract TanganyERC721 is ERC721, Ownable {
     /**
      * @dev Constructor that gives msg.sender the non-fungible token.
      */
-    constructor () public ERC721(NAME, SYMBOL) {
-        super._mint(msg.sender, totalSupply().add(1));
+    constructor () ERC721(NAME, SYMBOL) {
+        _mint(msg.sender, totalSupply() + 1);
     }
 
     function mint(address to) public onlyOwner {
-        super._mint(to, totalSupply().add(1));
+        _mint(to, totalSupply() + 1);
     }
 }

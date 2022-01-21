@@ -1,17 +1,17 @@
 // SPDX-License-Identifier: MIT
-pragma solidity ^0.6.0;
+pragma solidity ^0.8.0;
 pragma experimental ABIEncoderV2;
 
-import '@openzeppelin/contracts/math/SafeMath.sol';
-import '@openzeppelin/contracts/math/SignedSafeMath.sol';
+import '@openzeppelin/contracts/utils/math/SafeMath.sol';
+import '@openzeppelin/contracts/utils/math/SignedSafeMath.sol';
 
 contract Caller {
     using SafeMath for uint256;
     using SignedSafeMath for int256;
     address payable public owner;
 
-    constructor() public {
-        owner = msg.sender;
+    constructor() {
+        owner = payable(msg.sender);
     }
 
     function getCaller() public view returns (address) {
@@ -49,14 +49,14 @@ contract Caller {
     function callSumUintArray(uint256[] memory value) public pure returns (uint256, uint256[] memory) {
         uint256 sum = 0;
         for (uint256 i = 0; i < value.length; i++) {
-            sum = sum.add(value[i]);
+            sum = sum + value[i];
         }
         return (sum, value);
     }
 
     function callDecreaseInt(int256[] memory value) public pure returns (int256[] memory) {
         for (uint256 i = 0; i < value.length; i++) {
-            value[i] = value[i].sub(1);
+            value[i] = value[i] - 1;
         }
         return value;
     }
