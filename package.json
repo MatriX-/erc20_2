@@ -28,7 +28,7 @@
   "dependencies": {
     "@truffle/hdwallet-provider": "^2.0.1",
     "cpr": "^3.0.1",
-    "dotenv": "^8.2.0",
+    "dotenv": "^14.3.2",
     "rimraf": "^3.0.2",
     "truffle": "^5.1.55",
     "truffle-plugin-verify": "^0.5.2"
