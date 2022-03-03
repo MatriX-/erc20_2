@@ -26,7 +26,7 @@
   "author": "Tangany <developers@tangany.com>",
   "license": "ISC",
   "dependencies": {
-    "@truffle/hdwallet-provider": "^2.0.1",
+    "@truffle/hdwallet-provider": "^2.0.3",
     "cpr": "^3.0.1",
     "dotenv": "^14.3.2",
     "rimraf": "^3.0.2",
