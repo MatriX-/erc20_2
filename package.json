@@ -30,7 +30,7 @@
     "cpr": "^3.0.1",
     "dotenv": "^16.0.0",
     "rimraf": "^3.0.2",
-    "truffle": "^5.2.0",
+    "truffle": "^5.3.0",
     "truffle-plugin-verify": "^0.5.2"
   },
   "devDependencies": {
