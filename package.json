@@ -16,6 +16,7 @@
     "deploy:development": "truffle migrate --network development",
     "list:compilers": "truffle compile --list",
     "prebuild": "rimraf ./build/contracts/*",
+    "preinstall": "npx npm-force-resolutions",
     "postinstall": "cpr .env.example .env",
     "verify:ropsten": "truffle run verify --network ropsten",
     "verify:mainnet": "truffle run verify --network mainnet",
@@ -29,6 +30,8 @@
     "@truffle/hdwallet-provider": "^1.7.0",
     "cpr": "^3.0.1",
     "dotenv": "^16.0.0",
+    "marked": "^4.0.12",
+    "node-fetch": "^3.2.1",
     "rimraf": "^3.0.2",
     "truffle": "^5.1.67",
     "truffle-plugin-verify": "^0.5.2"
