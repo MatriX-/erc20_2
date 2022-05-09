@@ -104,4 +104,22 @@ contract("Caller", accounts => {
             assert.deepStrictEqual(call, [a, a]);
         });
     });
+
+    describe("callReturnStruct", function () {
+        it("should return expected", async () => {
+            const instance = await Caller.deployed();
+            const a = instance.address;
+            const bytesArray = [web3.utils.hexToBytes(web3.utils.randomHex(1)), web3.utils.hexToBytes(web3.utils.randomHex(1))];
+            const bytes2 = web3.utils.hexToBytes(web3.utils.randomHex(2));
+            const bytes = web3.utils.hexToBytes(web3.utils.randomHex(1));
+
+            const call = await instance.callReturnStruct(1, [a, bytesArray, bytes2, bytes]);
+
+            assert.strictEqual(new web3.utils.BN(call[0]).toNumber(), 1);
+            assert.deepStrictEqual(call[1], a);
+            assert.deepStrictEqual(call[2].map(b => web3.utils.hexToBytes(b)), bytesArray);
+            assert.deepStrictEqual(web3.utils.hexToBytes(call[3]), bytes2);
+            assert.deepStrictEqual(web3.utils.hexToBytes(call[4]), bytes);
+        });
+    });
 });

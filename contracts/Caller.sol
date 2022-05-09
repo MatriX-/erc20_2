@@ -82,4 +82,15 @@ contract Caller {
     function callReturnMixed(int256 _int, uint256 _uint, bool _bool, string calldata _string, address _address) public pure returns (int256, uint256, bool, string calldata, address) {
         return (_int, _uint, _bool, _string, _address);
     }
+
+    struct TestStruct {
+        address payable _address;
+        bytes[] _bytesArray;
+        bytes2 _bytes2;
+        bytes _bytes;
+    }
+
+    function callReturnStruct(uint256 _uint, TestStruct calldata _struct) public pure returns (uint256, address payable, bytes[] calldata, bytes2, bytes calldata) {
+        return (_uint, _struct._address, _struct._bytesArray, _struct._bytes2, _struct._bytes);
+    }
 }
