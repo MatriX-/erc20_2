@@ -31,6 +31,7 @@ Write and run contract tests from `./test` directory. Start up a local developme
 <br>(2019-02-26) [0xC32AE45504Ee9482db99CfA21066A59E877Bc0e6](https://ropsten.etherscan.io/address/0xc32ae45504ee9482db99cfa21066a59e877bc0e6)
 
 - Contract Caller:
+<br>(2022-05-11) [0x1AF2F9f16ca6A237c6Cd113043532252C9D0f2ba](https://ropsten.etherscan.io/address/0x1AF2F9f16ca6A237c6Cd113043532252C9D0f2ba)
 <br>(2020-10-16) [0x6dfC099FD9D1214e37e33Ecb3124dE451b751EbF](https://ropsten.etherscan.io/address/0x6dfC099FD9D1214e37e33Ecb3124dE451b751EbF)
 
 - Event Emitter: 
