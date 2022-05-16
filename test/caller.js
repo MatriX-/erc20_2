@@ -1,5 +1,4 @@
 const assert = require("assert");
-const {describe, it} = require("mocha");
 const Caller = artifacts.require("Caller");
 
 contract("Caller", accounts => {
@@ -102,6 +101,65 @@ contract("Caller", accounts => {
             const call = await instance.callFlattenAddressArray([[a, a], []]);
 
             assert.deepStrictEqual(call, [a, a]);
+        });
+    });
+
+    describe("callReturnStruct(uint256,(address,bool))", function() {
+        it("should return expected", async () => {
+            const instance = await Caller.deployed();
+            const a = instance.address;
+            const call = await instance.callReturnStruct(10, [a, true]);
+
+            assert.deepStrictEqual(new web3.utils.BN(call[0]).toNumber(), 10);
+            assert.deepStrictEqual(call[1], a);
+            assert.deepStrictEqual(call[2], true);
+        });
+    });
+
+    describe("callReturnStruct(uint256,(address,bytes[],bytes2,bytes))", function () {
+        it("should return expected", async () => {
+            const instance = await Caller.deployed();
+            const a = instance.address;
+            const bytesArray = [web3.utils.hexToBytes(web3.utils.randomHex(1)), web3.utils.hexToBytes(web3.utils.randomHex(1))];
+            const bytes2 = web3.utils.hexToBytes(web3.utils.randomHex(2));
+            const bytes = web3.utils.hexToBytes(web3.utils.randomHex(1));
+
+            const call = await instance.methods["callReturnStruct(uint256,(address,bytes[],bytes2,bytes))"](1, [a, bytesArray, bytes2, bytes]);
+
+            assert.strictEqual(new web3.utils.BN(call[0]).toNumber(), 1);
+            assert.deepStrictEqual(call[1], a);
+            assert.deepStrictEqual(call[2].map(b => web3.utils.hexToBytes(b)), bytesArray);
+            assert.deepStrictEqual(web3.utils.hexToBytes(call[3]), bytes2);
+            assert.deepStrictEqual(web3.utils.hexToBytes(call[4]), bytes);
+        });
+    });
+
+    describe("callReturnStructArray", function () {
+        it("should return expected", async () => {
+            const instance = await Caller.deployed();
+            const a = instance.address;
+            const b = "0x0000000000000000000000000000000000000000";
+            const bytesArray = [web3.utils.hexToBytes(web3.utils.randomHex(1)), web3.utils.hexToBytes(web3.utils.randomHex(1))];
+            const bytes2 = web3.utils.hexToBytes(web3.utils.randomHex(2));
+            const bytes = web3.utils.hexToBytes(web3.utils.randomHex(1));
+
+            const call = await instance.callReturnStructArray([[a, bytesArray, bytes2, bytes], [b, bytesArray, bytes2, bytes]], 1);
+            assert.strictEqual(call[0], a);
+            assert.strictEqual(call[1], b);
+            assert.strictEqual(new web3.utils.BN(call[2]).toNumber(), 1);
+        });
+    });
+
+    describe("callReturnNestedStruct", function () {
+        it("should return expected", async () => {
+            const instance = await Caller.deployed();
+            const a = instance.address;
+            const bytes2 = web3.utils.hexToBytes(web3.utils.randomHex(2));
+
+            const call = await instance.callReturnNestedStruct([[a, true], false, [a, [bytes2], bytes2, bytes2]]);
+            assert.strictEqual(call[0], true);
+            assert.strictEqual(call[1], false);
+            assert.deepStrictEqual(web3.utils.hexToBytes(call[2]), bytes2);
         });
     });
 });
