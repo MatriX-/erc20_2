@@ -12,6 +12,7 @@
     "build": "truffle compile",
     "deploy:mainnet": "truffle migrate --network mainnet",
     "deploy:ropsten": "truffle migrate --network ropsten",
+    "deploy:goerli": "truffle migrate --network goerli",
     "deploy:private": "truffle migrate --network private",
     "deploy:development": "truffle migrate --network development",
     "list:compilers": "truffle compile --list",
@@ -19,6 +20,7 @@
     "preinstall": "npx npm-force-resolutions",
     "postinstall": "cpr .env.example .env",
     "verify:ropsten": "truffle run verify --network ropsten",
+    "verify:goerli": "truffle run verify --network goerli",
     "verify:mainnet": "truffle run verify --network mainnet",
     "test": "truffle test ./test/payments.js --show-events"
   },
