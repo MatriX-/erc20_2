@@ -10,56 +10,80 @@
 </div>  
 
 # Development
-Install NodeJS and NPM. Windows Users experience fewer failures during installation when NodeJS LTS version 10 is used. Run `npm install`.
 
-Modify the token blueprint (e.g. [./contracts/TanganyERC20.sol](contracts/TanganyERC20.sol)) to deploy the token.  Make sure the contract file name is referenced correctly in [./migrations/2_deploy_contract.js](./migrations/2_deploy_contract.js).
+Install NodeJS and NPM. Windows Users experience fewer failures during installation when NodeJS LTS version 10 is used.
+Run `npm install`.
+
+Modify the token blueprint (e.g. [./contracts/TanganyERC20.sol](contracts/TanganyERC20.sol)) to deploy the token. Make
+sure the contract file name is referenced correctly
+in [./migrations/2_deploy_contract.js](./migrations/2_deploy_contract.js).
 
 ## Environment Variables
 
-Each deployment environment has a different set of mandatory environment variables. Add the secrets required for the deployment environment to [.env](./.env)
+Each deployment environment has a different set of mandatory environment variables. Add the secrets required for the
+deployment environment to [.env](./.env)
 
-Make sure to provide the `PRIVATE_KEY`. Ether by setting a mnemonic (the twelve word phrase), or a 64 character long hex-decimal string. The associated address will inherit the tokens created by the contract deployment.
+Make sure to provide the `PRIVATE_KEY`. Ether by setting a mnemonic (the twelve word phrase), or a 64 character long
+hex-decimal string. The associated address will inherit the tokens created by the contract deployment.
 
 ## Contract Tests
-Write and run contract tests from `./test` directory. Start up a local development chain running `truffle develop` and run tests with `truffle test`.
 
-# Deployment
+Write and run contract tests from `./test` directory. Start up a local development chain running `truffle develop` and
+run tests with `truffle test`.
 
-## Current Contract Addresses
+## Current Tangany contract deployments
+
+Following are contracts used for documentation purposes in the Tangany Suite that were deployed and verified using this
+repository
 
 - TanganyTestToken ERC20:
-<br>(2022-08-30) Goerli [0xc06E361F2FBD2ef75dfA2cb3536dC77A4cCFc44c](https://goerli.etherscan.io/address/0xc06E361F2FBD2ef75dfA2cb3536dC77A4cCFc44c)
-<br>(2019-02-26) Ropsten [0xC32AE45504Ee9482db99CfA21066A59E877Bc0e6](https://ropsten.etherscan.io/address/0xc32ae45504ee9482db99cfa21066a59e877bc0e6)
+  <br>(2022-08-30)
+  Goerli [0xc06E361F2FBD2ef75dfA2cb3536dC77A4cCFc44c](https://goerli.etherscan.io/address/0xc06E361F2FBD2ef75dfA2cb3536dC77A4cCFc44c)
+  <br>(2019-02-26)
+  Ropsten [0xC32AE45504Ee9482db99CfA21066A59E877Bc0e6](https://ropsten.etherscan.io/address/0xc32ae45504ee9482db99cfa21066a59e877bc0e6)
 
 - TanganyTestToken ERC721
-<br>(2022-08-30) Goerli [0x317df482Aa62C2866Fa51a9da67E4b1ebAE491d3](https://goerli.etherscan.io/address/0x317df482Aa62C2866Fa51a9da67E4b1ebAE491d3)
+  <br>(2022-08-30)
+  Goerli [0x317df482Aa62C2866Fa51a9da67E4b1ebAE491d3](https://goerli.etherscan.io/address/0x317df482Aa62C2866Fa51a9da67E4b1ebAE491d3)
 
 - Contract Caller:
-<br>(2022-08-30) Goerli [0x735fcc036022122082A6f870D6c02F5B3a38668B](https://goerli.etherscan.io/address/0x735fcc036022122082A6f870D6c02F5B3a38668B)
-<br>(2021-05-11) Ropsten [0x1AF2F9f16ca6A237c6Cd113043532252C9D0f2ba](https://ropsten.etherscan.io/address/0x1AF2F9f16ca6A237c6Cd113043532252C9D0f2ba)
-<br>(2020-10-16) Ropsten [0x6dfC099FD9D1214e37e33Ecb3124dE451b751EbF](https://ropsten.etherscan.io/address/0x6dfC099FD9D1214e37e33Ecb3124dE451b751EbF)
+  <br>(2022-08-30)
+  Goerli [0x735fcc036022122082A6f870D6c02F5B3a38668B](https://goerli.etherscan.io/address/0x735fcc036022122082A6f870D6c02F5B3a38668B)
+  <br>(2021-05-11)
+  Ropsten [0x1AF2F9f16ca6A237c6Cd113043532252C9D0f2ba](https://ropsten.etherscan.io/address/0x1AF2F9f16ca6A237c6Cd113043532252C9D0f2ba)
+  <br>(2020-10-16)
+  Ropsten [0x6dfC099FD9D1214e37e33Ecb3124dE451b751EbF](https://ropsten.etherscan.io/address/0x6dfC099FD9D1214e37e33Ecb3124dE451b751EbF)
 
 - Event Emitter:
-<br>(2022-08-30) Goerli [0xaB20627C1F4afFc6227286DF06a52E7D995D3F23](https://goerli.etherscan.io/address/0xaB20627C1F4afFc6227286DF06a52E7D995D3F23)
-<br>(2020-10-20) Ropsten [0x6412eFCdD4423f166dcF2475770a6764Bbf6bDB2](https://ropsten.etherscan.io/address/0x6412eFCdD4423f166dcF2475770a6764Bbf6bDB2)
-<br>(2020-10-06) Ropsten [0xaE3093b6EA3E9dc5a09690A55634504A40E567D3](https://ropsten.etherscan.io/address/0xae3093b6ea3e9dc5a09690a55634504a40e567d3)
+  <br>(2022-08-30)
+  Goerli [0xaB20627C1F4afFc6227286DF06a52E7D995D3F23](https://goerli.etherscan.io/address/0xaB20627C1F4afFc6227286DF06a52E7D995D3F23)
+  <br>(2020-10-20)
+  Ropsten [0x6412eFCdD4423f166dcF2475770a6764Bbf6bDB2](https://ropsten.etherscan.io/address/0x6412eFCdD4423f166dcF2475770a6764Bbf6bDB2)
+  <br>(2020-10-06)
+  Ropsten [0xaE3093b6EA3E9dc5a09690A55634504A40E567D3](https://ropsten.etherscan.io/address/0xae3093b6ea3e9dc5a09690a55634504a40e567d3)
 
 - TanganyLoveToken (faucet):
-<br>(2022-08-30) Goerli [0x64AC61D4cFC7a38929d5DBA2b0d2b2c0588adDD4](https://goerli.etherscan.io/address/0x64AC61D4cFC7a38929d5DBA2b0d2b2c0588adDD4)
-<br>(2020-10-12) Ropsten [0x62f49D4A051a22Cd5573b1197FD3E96F1026346D](https://ropsten.etherscan.io/address/0x62f49D4A051a22Cd5573b1197FD3E96F1026346D)
+  <br>(2022-08-30)
+  Goerli [0x64AC61D4cFC7a38929d5DBA2b0d2b2c0588adDD4](https://goerli.etherscan.io/address/0x64AC61D4cFC7a38929d5DBA2b0d2b2c0588adDD4)
+  <br>(2020-10-12)
+  Ropsten [0x62f49D4A051a22Cd5573b1197FD3E96F1026346D](https://ropsten.etherscan.io/address/0x62f49D4A051a22Cd5573b1197FD3E96F1026346D)
 
 - Payments Contract:
-<br>(2022-08-30) Goerli [0xa744274531a5D8578bE6266267659844DEdFa782](https://goerli.etherscan.io/address/0xa744274531a5D8578bE6266267659844DEdFa782)
-<br>(2021-09-10) Ropsten [0x4341f8409dF7EE681Ca3C79250e8e97bD5B32438](https://ropsten.etherscan.io/address/0x4341f8409dF7EE681Ca3C79250e8e97bD5B32438)
+  <br>(2022-08-30)
+  Goerli [0xa744274531a5D8578bE6266267659844DEdFa782](https://goerli.etherscan.io/address/0xa744274531a5D8578bE6266267659844DEdFa782)
+  <br>(2021-09-10)
+  Ropsten [0x4341f8409dF7EE681Ca3C79250e8e97bD5B32438](https://ropsten.etherscan.io/address/0x4341f8409dF7EE681Ca3C79250e8e97bD5B32438)
 
-- Test Contract (deprecated): 
-<br>(2020-07-08) Ropsten [0x61B6a7b2b031Ca7053c3fD28F255AC4B17ecd5a4](https://ropsten.etherscan.io/address/0x61b6a7b2b031ca7053c3fd28f255ac4b17ecd5a4)
+- Test Contract (deprecated):
+  <br>(2020-07-08)
+  Ropsten [0x61B6a7b2b031Ca7053c3fD28F255AC4B17ecd5a4](https://ropsten.etherscan.io/address/0x61b6a7b2b031ca7053c3fd28f255ac4b17ecd5a4)
 
 ## Deploy
 
-Make sure the private key has enough ether on the required network to fund the deployment transactions. 
+Make sure the private key has enough ether on the required network to fund the deployment transactions.
 
-Deploy the smart contract to the desired environment with the provided commands (e.g. `npm run deploy:ropsten`). The address of the deployed contract will be printed to the console output:
+Deploy the smart contract to the desired environment with the provided commands (e.g. `npm run deploy:ropsten`). The
+address of the deployed contract will be printed to the console output:
 
 ````
 
@@ -152,10 +176,14 @@ Summary
 > Final cost:          0.03013862 ETH
 ````
 
-In this example the smart contract was deployed to the address `0x08D65FFaAA99a54a98AED475f5c9d659eF60CA7b` on the Ganache Development network. The address `0xc460f0A72A5860107F2606321401f07549Bb4ddA` gained ownership to the smart contract and received 10000 tokens.
+In this example the smart contract was deployed to the address `0x08D65FFaAA99a54a98AED475f5c9d659eF60CA7b` on the
+Ganache Development network. The address `0xc460f0A72A5860107F2606321401f07549Bb4ddA` gained ownership to the smart
+contract and received 10000 tokens.
 
-## Development network / Ganache 
+## Development network / Ganache
+
 Required environment variables
+
 * PRIVATE_KEY
 
 ```
@@ -163,23 +191,28 @@ npm run build && npm run deploy:development
 ```
 
 ## Private network
+
 Required environment variables
+
 * PRIVATE_KEY
 * PRIVATE_NETWORK_URL
 * PRIVATE_NETWORK_ID
 
-Also make sure to verify the [truffle settings](./truffle-config.js) for `private` match the actual private network (gas, gasPrice, ...)
+Also make sure to verify the [truffle settings](./truffle-config.js) for `private` match the actual private network (
+gas, gasPrice, ...)
 
 ```
 npm run build && npm run deploy:private
 ```
 
 ## Public network
+
 Required environment variables
+
 * PRIVATE_KEY
 * INFURA_KEY
 
-Sign up for a free api key at https://infura.io/dashboard to deploy to public networks. 
+Sign up for a free api key at https://infura.io/dashboard to deploy to public networks.
 
 ```
 npm run build && npm run deploy:ropsten
@@ -190,14 +223,19 @@ npm run build && npm run deploy:mainnet
 ```
 
 ## Verification
-In order to verify your smart contract on etherscan.io execute the verification script immediately after the contract is successfully deployed and pass the contract name as the argument (e.g. `npm run verify:ropsten -- TanganyERC20`). 
-This action supports smart contracts deployed on public Ethereum networks and does require the `ETHERSCAN_APIKEY` environment variable to execute. The API key can be generated for free at https://etherscan.io/myapikey. For troubleshooting use the command option `--debug`.
+
+In order to verify your smart contract on etherscan.io execute the verification script immediately after the contract is
+successfully deployed and pass the contract name as the argument (e.g. `npm run verify:ropsten -- TanganyERC20`).
+This action supports smart contracts deployed on public Ethereum networks and does require the `ETHERSCAN_APIKEY`
+environment variable to execute. The API key can be generated for free at https://etherscan.io/myapikey. For
+troubleshooting use the command option `--debug`.
 
 ![](./docs/etherscan-verified.png)
 
-
 # Disclaimer
-Deploy at your own risk! This software is provided "as-is" without warranty of any kind. Tangany does not take any responsibility for loss of funds caused through use of this repository.
+
+Deploy at your own risk! This software is provided "as-is" without warranty of any kind. Tangany does not take any
+responsibility for loss of funds caused through use of this repository.
 
 ***
 <div align="center">
