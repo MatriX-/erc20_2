@@ -33,50 +33,52 @@ run tests with `truffle test`.
 
 ## Current Tangany contract deployments
 
-Following are contracts used for documentation purposes in the Tangany Suite that were deployed and verified using this
+Following are contracts used for documentation & testing purposes in the Tangany API Suite that were deployed and verified using this
 repository
 
-- TanganyTestToken ERC20:
+- ### TanganyERC20 (ERC20):
   <br>(2022-08-30)
   Goerli [0xc06E361F2FBD2ef75dfA2cb3536dC77A4cCFc44c](https://goerli.etherscan.io/address/0xc06E361F2FBD2ef75dfA2cb3536dC77A4cCFc44c)
-  <br>(2019-02-26)
-  Ropsten [0xC32AE45504Ee9482db99CfA21066A59E877Bc0e6](https://ropsten.etherscan.io/address/0xc32ae45504ee9482db99cfa21066a59e877bc0e6)
+  <br>~~(2019-02-26)
+  Ropsten [0xC32AE45504Ee9482db99CfA21066A59E877Bc0e6](https://ropsten.etherscan.io/address/0xc32ae45504ee9482db99cfa21066a59e877bc0e6)~~
 
-- TanganyTestToken ERC721
+- ### TanganyERC721 (ERC721)
   <br>(2022-08-30)
   Goerli [0x317df482Aa62C2866Fa51a9da67E4b1ebAE491d3](https://goerli.etherscan.io/address/0x317df482Aa62C2866Fa51a9da67E4b1ebAE491d3)
+  <br>(2010-01-21)
+  Mainnet [0x7EAC2E54376fE685Cc10D83bE0e1600e6b5fbA3e](https://etherscan.io/address/0x7EAC2E54376fE685Cc10D83bE0e1600e6b5fbA3e)
 
-- Contract Caller:
+- ### Contract Caller:
   <br>(2022-08-30)
   Goerli [0x735fcc036022122082A6f870D6c02F5B3a38668B](https://goerli.etherscan.io/address/0x735fcc036022122082A6f870D6c02F5B3a38668B)
-  <br>(2021-05-11)
-  Ropsten [0x1AF2F9f16ca6A237c6Cd113043532252C9D0f2ba](https://ropsten.etherscan.io/address/0x1AF2F9f16ca6A237c6Cd113043532252C9D0f2ba)
-  <br>(2020-10-16)
-  Ropsten [0x6dfC099FD9D1214e37e33Ecb3124dE451b751EbF](https://ropsten.etherscan.io/address/0x6dfC099FD9D1214e37e33Ecb3124dE451b751EbF)
+  ~~<br>(2021-05-11)
+  Ropsten [0x1AF2F9f16ca6A237c6Cd113043532252C9D0f2ba](https://ropsten.etherscan.io/address/0x1AF2F9f16ca6A237c6Cd113043532252C9D0f2ba)~~
+  ~~<br>(2020-10-16)
+  Ropsten [0x6dfC099FD9D1214e37e33Ecb3124dE451b751EbF](https://ropsten.etherscan.io/address/0x6dfC099FD9D1214e37e33Ecb3124dE451b751EbF)~~
 
-- Event Emitter:
+- ### Event Emitter:
   <br>(2022-08-30)
   Goerli [0xaB20627C1F4afFc6227286DF06a52E7D995D3F23](https://goerli.etherscan.io/address/0xaB20627C1F4afFc6227286DF06a52E7D995D3F23)
-  <br>(2020-10-20)
-  Ropsten [0x6412eFCdD4423f166dcF2475770a6764Bbf6bDB2](https://ropsten.etherscan.io/address/0x6412eFCdD4423f166dcF2475770a6764Bbf6bDB2)
-  <br>(2020-10-06)
-  Ropsten [0xaE3093b6EA3E9dc5a09690A55634504A40E567D3](https://ropsten.etherscan.io/address/0xae3093b6ea3e9dc5a09690a55634504a40e567d3)
+  ~~<br>(2020-10-20)
+  Ropsten [0x6412eFCdD4423f166dcF2475770a6764Bbf6bDB2](https://ropsten.etherscan.io/address/0x6412eFCdD4423f166dcF2475770a6764Bbf6bDB2)~~
+  ~~<br>(2020-10-06)
+  Ropsten [0xaE3093b6EA3E9dc5a09690A55634504A40E567D3](https://ropsten.etherscan.io/address/0xae3093b6ea3e9dc5a09690a55634504a40e567d3)~~
 
-- TanganyLoveToken (faucet):
+- ### TanganyLoveToken (faucet):
   <br>(2022-08-30)
   Goerli [0x64AC61D4cFC7a38929d5DBA2b0d2b2c0588adDD4](https://goerli.etherscan.io/address/0x64AC61D4cFC7a38929d5DBA2b0d2b2c0588adDD4)
-  <br>(2020-10-12)
-  Ropsten [0x62f49D4A051a22Cd5573b1197FD3E96F1026346D](https://ropsten.etherscan.io/address/0x62f49D4A051a22Cd5573b1197FD3E96F1026346D)
+  ~~<br>(2020-10-12)
+  Ropsten [0x62f49D4A051a22Cd5573b1197FD3E96F1026346D](https://ropsten.etherscan.io/address/0x62f49D4A051a22Cd5573b1197FD3E96F1026346D)~~
 
-- Payments Contract:
+- ### Payments Contract:
   <br>(2022-08-30)
   Goerli [0xa744274531a5D8578bE6266267659844DEdFa782](https://goerli.etherscan.io/address/0xa744274531a5D8578bE6266267659844DEdFa782)
-  <br>(2021-09-10)
-  Ropsten [0x4341f8409dF7EE681Ca3C79250e8e97bD5B32438](https://ropsten.etherscan.io/address/0x4341f8409dF7EE681Ca3C79250e8e97bD5B32438)
+  ~~<br>(2021-09-10)
+  Ropsten [0x4341f8409dF7EE681Ca3C79250e8e97bD5B32438](https://ropsten.etherscan.io/address/0x4341f8409dF7EE681Ca3C79250e8e97bD5B32438)~~
 
-- Test Contract (deprecated):
+- ~~Test Contract (deprecated):
   <br>(2020-07-08)
-  Ropsten [0x61B6a7b2b031Ca7053c3fD28F255AC4B17ecd5a4](https://ropsten.etherscan.io/address/0x61b6a7b2b031ca7053c3fd28f255ac4b17ecd5a4)
+  Ropsten [0x61B6a7b2b031Ca7053c3fD28F255AC4B17ecd5a4](https://ropsten.etherscan.io/address/0x61b6a7b2b031ca7053c3fd28f255ac4b17ecd5a4)~~
 
 ## Deploy
 
