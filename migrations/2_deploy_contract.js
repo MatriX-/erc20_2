@@ -10,9 +10,9 @@ module.exports = function (deployer) {
      * add the desired contracts to the next lines
      */
      deployer.deploy(TanganyERC20);
-     deployer.deploy(TanganyERC721);
-     deployer.deploy(TanganyLoveToken);
-     deployer.deploy(Payments);
-     deployer.deploy(Emitter);
-     deployer.deploy(Caller);
+    //  deployer.deploy(TanganyERC721);
+    //  deployer.deploy(TanganyLoveToken);
+    //  deployer.deploy(Payments);
+    //  deployer.deploy(Emitter);
+    //  deployer.deploy(Caller);
 };

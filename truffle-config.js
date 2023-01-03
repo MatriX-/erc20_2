@@ -122,6 +122,17 @@ module.exports = {
             // skipDryRun: true     // Skip dry run before migrations? (default: false for public nets )
         },
 
+        mumbai: {
+            provider: () => new HDWalletProvider({
+                privateKeys: [process.env.PRIVATE_KEY],
+                providerOrUrl: `https://rpc-mumbai.maticvigil.com/v1/${process.env.MATICVIGIL_APIKEY}`
+            }),
+            network_id: 80001,
+            confirmations: 2,
+            timeoutBlocks: 200,
+            skipDryRun: true
+        },
+
         mainnet: {
             provider: () => new HDWalletProvider({
                 privateKeys: [process.env.PRIVATE_KEY],

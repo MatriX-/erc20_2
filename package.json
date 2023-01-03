@@ -13,6 +13,7 @@
     "deploy:mainnet": "truffle migrate --network mainnet",
     "deploy:ropsten": "truffle migrate --network ropsten",
     "deploy:goerli": "truffle migrate --network goerli",
+    "deploy:mumbai": "truffle migrate --network mumbai",
     "deploy:private": "truffle migrate --network private",
     "deploy:development": "truffle migrate --network development",
     "list:compilers": "truffle compile --list",
@@ -21,6 +22,7 @@
     "postinstall": "cpr .env.example .env",
     "verify:ropsten": "truffle run verify --network ropsten",
     "verify:goerli": "truffle run verify --network goerli",
+    "verify:mumbai": "truffle run verify --network mumbai",
     "verify:mainnet": "truffle run verify --network mainnet",
     "test": "truffle test ./test/payments.js --show-events"
   },
