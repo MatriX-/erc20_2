@@ -41,7 +41,7 @@
     "truffle-plugin-verify": "^0.5.2"
   },
   "devDependencies": {
-    "@openzeppelin/contracts": "^4.5.0"
+    "@openzeppelin/contracts": "^4.8.3"
   },
   "resolutions": {
     "node-fetch": "3.2.1",
